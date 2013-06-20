@@ -42,7 +42,7 @@ test {
 	systemProperty("java.awt.headless", "true")
 	systemProperty("testGroups", project.properties.get("testGroups"))
 	scanForTestClasses = false
-	include '**/*Test.java'
+	include '**/*Test.*'
 	exclude '**/*Abstract*.*'
         testLogging {
              exceptionFormat = 'full'
@@ -56,4 +56,5 @@ dependencies {
 	compile("commons-logging:commons-logging:1.1.1")
 	testCompile(springMVC, springTest)
         compile(springMVC)
+        runtime(springMVC, "javax.servlet:javax.servlet-api:3.0.1")
 }
