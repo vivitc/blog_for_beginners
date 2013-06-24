@@ -29,6 +29,6 @@ public class AcceptanceTest {
     public void index() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("post1"));
+                .andExpect(view().name("post"));
     }
 }
